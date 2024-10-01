@@ -1,0 +1,23 @@
+<p>home works!</p>
+
+<input class="form-control" type="text" [(ngModel)]="color"> {{ title }}
+
+<input class="form-control" class="btn btn-primary" type="submit" value="save" (click)=msg()>
+
+
+
+<div [style.backgroundColor]="color">
+    propertyBinding
+</div>
+
+
+<div class="row">
+    <div *ngFor="let u of listUsers" class="card" style="width: 18rem;">
+
+        <img class="card-img-top" src="" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{u.name}}</h5>
+            <p class="card-text">{{u.age}}</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
