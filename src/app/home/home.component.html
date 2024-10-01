@@ -10,7 +10,7 @@
     propertyBinding
 </div>
 
-
+<!--card
 <div class="row">
     <div *ngFor="let u of listUsers" class="card" style="width: 18rem;">
 
@@ -21,3 +21,26 @@
             <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
     </div>
+
+    -->
+<!-- Table -->
+<div class="container mt-4">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Nom</th>
+                <th scope="col">Âge</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let u of listUsers">
+                <td>{{ u.name }}</td>
+                <td>{{ u.age }}</td>
+                <td>
+                    <a href="#" class="btn btn-primary">Register</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
