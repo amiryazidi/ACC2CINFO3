@@ -15,12 +15,7 @@ listUsers = [
   {id : 3 ,name: 'nour', age: 29},
 ]
 
-listProduct = [
-  {id : 1 ,title: 'Iphone 15', prix: 2000, quantity: 10, like: 0},
-  {id : 2 ,title: 'Iphone 16', prix: 3000, quantity: 0, like: 0},
-  {id : 3 ,title: 'Iphone 17', prix: 4000, quantity: 5, like: 0},
 
-]
 
 msg(){
   alert('hello')
