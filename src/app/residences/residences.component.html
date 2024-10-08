@@ -1,0 +1,26 @@
+<div *ngFor="let residence of listResidences" class="residence-card">
+  <h2>{{ residence.name }}</h2>
+  <p>{{ residence.address }}</p>
+  <img [src]="residence.image" alt="{{ residence.name }}">
+  <button (click)="showApartments(residence.id)">Show apartments</button>
+
+  <div *ngIf="selectedResidenceId === residence.id">
+    <input type="number" placeholder="Search by surface" [(ngModel)]="searchSurface" (input)="filterApartmentsBySurface()">
+    <div *ngIf="filteredApartments.length > 0">
+      <div *ngFor="let apartment of filteredApartments" class="apartment-card">
+        <p>Apartment Number: {{ apartment.appartNum }}</p>
+        <p>Floor Number: {{ apartment.floorNum }}</p>
+        <p>Surface: {{ apartment.surface }} m²</p>
+        <p>Terrace: {{ apartment.terrace }}</p>
+        <p>Surface Terrace: {{ apartment.surfaceTerrace }} m²</p>
+        <p>Category: {{ apartment.category }}</p>
+        <p>Description: {{ apartment.description }}</p>
+        <button (click)="likeApartment(apartment)">Like</button>
+        <span *ngIf="apartment.isFavorite">This apartment is a favorite!</span>
+      </div>
+    </div>
+    <div *ngIf="filteredApartments.length === 0">
+      <p>No Apartment found</p>
+    </div>
+  </div>
+</div>
