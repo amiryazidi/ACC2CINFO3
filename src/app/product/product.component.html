@@ -13,6 +13,7 @@
                     <p class="card-text "> Like {{p.like}}</p>
                     <button class="btn btn-primary " (click)="increment(i) ">Like <3 </button>
                     <button class="btn btn-danger " [disabled]="p.quantity==0 " (click)="buy(i) ">buy </button>
+                    <button class="btn btn-success " [routerLink]="['/product',p.id]">Detail</button>
                 </div>
             </div>
         </ng-container>
