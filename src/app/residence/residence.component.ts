@@ -9,7 +9,7 @@ import { Apartment } from '../model/Apartment';
 })
 export class ResidenceComponent {
 
-  AppartFiltrer!:Apartment[]
+  AppartFiltrer:Apartment[]=[]
   listResidences:Residence[]=[
     {id:1,"name": "El fel","address":"Borj Cedria",
     "image":"../../assets/images/R1.jpeg"},

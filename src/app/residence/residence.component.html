@@ -10,26 +10,31 @@ apparts</button>
         </li>
     </ul>
 
+    <div *ngIf="AppartFiltrer.length != 0  else alt">
 
+        <h2 align="center">Apartments</h2>
+        <table class="table ">
 
-    <h2 align="center">Apartments</h2>
-    <table class="table ">
+            <tr>
+                <th scope="col ">appartNum</th>
+                <th scope="col ">floorNum</th>
+                <th scope="col ">surface</th>
+                <th scope="col ">terrace</th>
+                <th scope="col ">category</th>
+                <th></th>
+            </tr>
+            <tr *ngFor="let A of AppartFiltrer ">
+                <td scope="row">{{A.appartNum}}</td>
+                <td scope="row">{{A.floorNum}}</td>
+                <td scope="row">{{A.surface}}</td>
+                <td scope="row">{{A.terrace}}</td>
+                <td scope="row">{{A.category}}</td>
+            </tr>
 
-        <tr>
-            <th scope="col ">appartNum</th>
-            <th scope="col ">floorNum</th>
-            <th scope="col ">surface</th>
-            <th scope="col ">terrace</th>
-            <th scope="col ">category</th>
-            <th></th>
-        </tr>
-        <tr *ngFor="let A of AppartFiltrer ">
-            <td scope="row">{{A.appartNum}}</td>
-            <td scope="row">{{A.floorNum}}</td>
-            <td scope="row">{{A.surface}}</td>
-            <td scope="row">{{A.terrace}}</td>
-            <td scope="row">{{A.category}}</td>
-        </tr>
+        </table>
+    </div>
 
-    </table>
+    <ng-template #alt>
+        <h2 align="center">No Appartments</h2>
+    </ng-template>
 </div>
