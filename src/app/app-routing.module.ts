@@ -5,13 +5,17 @@ import { ProductComponent } from './product/product.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { DetailProductComponent } from './detail-product/detail-product.component';
 import { ResidenceComponent } from './residence/residence.component';
+import { FormResidenceComponent } from './form-residence/form-residence.component';
+import { ApartmentComponent } from './apartment/apartment.component';
 
 const routes: Routes = [
  {path:'home', component:HomeComponent},
  {path:'', redirectTo:'home', pathMatch:'full'},
  {path:'product', component:ProductComponent},
  {path:'residence', component:ResidenceComponent},
+ {path:'addResidence', component:FormResidenceComponent},
  {path:'product/:id', component:DetailProductComponent},
+ {path:'showApart/:id',component:ApartmentComponent},
  {path:'**', component:NotFoundComponent},
 
 

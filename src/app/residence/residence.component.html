@@ -4,37 +4,9 @@
     Residencs</h2>
 <div class="container">
     <ul class="list-group" *ngFor="let R of listResidences">
-        <li class="list-group-item d-flex justify-content-between align-itemscenter">{{R.name}}
-            <button class="btn btn-primary" (click)="show(R.id)">show
-apparts</button>
+        <li class="list-group-item d-flex justify-content-between align-itemscenter">
+            {{R.name}}
+            <a [routerLink]="['/showApart',R.id]">show App</a>
         </li>
     </ul>
-
-    <div *ngIf="AppartFiltrer.length != 0  else alt">
-
-        <h2 align="center">Apartments</h2>
-        <table class="table ">
-
-            <tr>
-                <th scope="col ">appartNum</th>
-                <th scope="col ">floorNum</th>
-                <th scope="col ">surface</th>
-                <th scope="col ">terrace</th>
-                <th scope="col ">category</th>
-                <th></th>
-            </tr>
-            <tr *ngFor="let A of AppartFiltrer ">
-                <td scope="row">{{A.appartNum}}</td>
-                <td scope="row">{{A.floorNum}}</td>
-                <td scope="row">{{A.surface}}</td>
-                <td scope="row">{{A.terrace}}</td>
-                <td scope="row">{{A.category}}</td>
-            </tr>
-
-        </table>
-    </div>
-
-    <ng-template #alt>
-        <h2 align="center">No Appartments</h2>
-    </ng-template>
 </div>
