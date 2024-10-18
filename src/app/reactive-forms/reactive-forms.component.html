@@ -1,0 +1,23 @@
+<h2> Inscription </h2>
+<form class="form-group" [formGroup]="formLogin">
+    <label>Login </label>
+    <input class="form-control" type="text" formControlName="login">
+    <div class="alert alert-danger" *ngIf="this.formLogin.controls['login'].invalid && this.formLogin.controls['login'].touched ">
+        <p *ngIf="formLogin.controls['login'].getError('required')"> login required</p>
+        <p *ngIf="formLogin.controls['login'].getError('minlength')"> login must be superieur à 3 caractere</p>
+    </div>
+    <label>password </label>
+    <input class="form-control" type="text" formControlName="pwd">
+    <div class="alert alert-danger" *ngIf="this.formLogin.controls['pwd'].invalid && this.formLogin.controls['pwd'].touched ">
+        <p *ngIf="formLogin.controls['pwd'].getError('required')"> login required</p>
+        <p *ngIf="formLogin.controls['pwd'].getError('pattern')"> mot de passe doit contenir au moins un caractère minuscule et un majuscule</p>
+    </div>
+    <label>Telephone </label>
+    <input class="form-control" type="text" formControlName="tel">
+
+
+    <label>Email </label>
+    <input class="form-control" type="text" formControlName="email">
+
+    <input type="submit" class="btn btn-primary mb-2" value="save" (click)="show()" [disabled]="formLogin.invalid">
+</form>

@@ -7,12 +7,14 @@ import { DetailProductComponent } from './detail-product/detail-product.componen
 import { ResidenceComponent } from './residence/residence.component';
 import { FormResidenceComponent } from './form-residence/form-residence.component';
 import { ApartmentComponent } from './apartment/apartment.component';
+import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 
 const routes: Routes = [
  {path:'home', component:HomeComponent},
  {path:'', redirectTo:'home', pathMatch:'full'},
  {path:'product', component:ProductComponent},
  {path:'residence', component:ResidenceComponent},
+ {path:'forms', component:ReactiveFormsComponent},
  {path:'addResidence', component:FormResidenceComponent},
  {path:'product/:id', component:DetailProductComponent},
  {path:'showApart/:id',component:ApartmentComponent},
