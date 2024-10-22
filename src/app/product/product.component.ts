@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Product } from '../model/product';
 import { ProductService } from '../services/product.service';
+import { CalculService } from '../services/calcul.service';
 
 @Component({
   selector: 'app-product',
@@ -9,7 +10,7 @@ import { ProductService } from '../services/product.service';
 })
 export class ProductComponent {
 
-  constructor(private ps:ProductService) { }
+  constructor(private ps:ProductService, private cs :CalculService) { }
   priceMax!:number;
 
   listProduct=this.ps.listProduct
@@ -20,4 +21,6 @@ export class ProductComponent {
   buy(i:number){
     this.listProduct[i].quantity--
   }
+
+  stock:number= this.cs.stat(this.listProduct,'quantity',0)
 }
