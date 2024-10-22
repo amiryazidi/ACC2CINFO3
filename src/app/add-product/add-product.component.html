@@ -1,0 +1,30 @@
+<p>add-product works!</p>
+<h2> Inscription </h2>
+<form class="form-group" [formGroup]="formProduct">
+    <label>id </label>
+    <input class="form-control" type="number" formControlName="id">
+    <div class="alert alert-danger" *ngIf="this.formProduct.controls['id'].invalid &&
+     this.formProduct.controls['id'].touched ">
+        <p *ngIf="formProduct.controls['id'].getError('required')"> id required</p>
+    </div>
+    <label>title </label>
+    <input class="form-control" type="text" formControlName="title">
+    <div class="alert alert-danger" *ngIf="this.formProduct.controls['title'].invalid && this.formProduct.controls['title'].touched ">
+        <p *ngIf="formProduct.controls['title'].getError('required')"> title required</p>
+        <p *ngIf="formProduct.controls['title'].getError('minlength')"> title doit contenir au moins 3 caracteres</p>
+    </div>
+    <label>price </label>
+    <input class="form-control" type="number" formControlName="price">
+    <div class="alert alert-danger" *ngIf="this.formProduct.controls['price'].invalid && this.formProduct.controls['price'].touched ">
+        <p *ngIf="formProduct.controls['price'].getError('required')"> price required</p>
+        <p *ngIf="formProduct.controls['price'].getError('min')"> price doit etre positive</p>
+    </div>
+
+    <label>quantity </label>
+    <input class="form-control" type="number" formControlName="quantity">
+
+    <label>image </label>
+    <input class="form-control" type="text" formControlName="image">
+
+    <input type="submit" class="btn btn-primary mb-2" value="save" (click)="show()" [disabled]="formProduct.invalid">
+</form>

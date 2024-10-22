@@ -11,7 +11,7 @@ export class ReactiveFormsComponent {
   formLogin = new FormGroup(
     {
       login:new FormControl('',[Validators.required,Validators.minLength(3)]),
-      pwd:new FormControl ('' ,[Validators.required,Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])[a-zA-Z*$')]),
+      pwd:new FormControl ('' ,[Validators.required,Validators.pattern(/^['a-zA-Z0-9']{6,}$/)]),
       tel:new FormControl ('' ,[Validators.required,Validators.pattern(/^['0-9']{8}$/)]),
       email:new FormControl ('' ,[Validators.required,Validators.email])
     }

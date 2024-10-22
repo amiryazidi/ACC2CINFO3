@@ -13,6 +13,7 @@ import { ResidenceComponent } from './residence/residence.component';
 import { FormResidenceComponent } from './form-residence/form-residence.component';
 import { ApartmentComponent } from './apartment/apartment.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
+import { AddProductComponent } from './add-product/add-product.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.componen
     FormResidenceComponent,
     ApartmentComponent,
     ReactiveFormsComponent,
+    AddProductComponent,
   ],
   imports: [
     BrowserModule,
