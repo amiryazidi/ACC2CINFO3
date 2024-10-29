@@ -19,7 +19,7 @@ export class ProductComponent {
 
   ngOnInit(){
   this.consp.getProducts().subscribe(
-      (data:Product[])=> this.listProduct=data
+      (t)=> this.listProduct=t
   );
 }
 
