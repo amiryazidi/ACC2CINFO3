@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "id": 2,
+      "title": "update",
+      "price": 500,
+      "quantity": 8000,
+      "like": 0,
+      "image": "typicode"
+    },
+    {
+      "id": 8,
+      "title": "amiiiiir",
+      "price": 555,
+      "quantity": 555,
+      "like": 0,
+      "image": "aagagaa"
+    },
+    {
+      "id": 888,
+      "title": "yazidi",
+      "price": 50,
+      "quantity": 100,
+      "like": 0,
+      "image": "yazidi"
+    }
+  ]
+}

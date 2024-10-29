@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Product } from '../model/product';
 import { ProductService } from '../services/product.service';
 import { CalculService } from '../services/calcul.service';
+import { ConsumerProductService } from '../services/consumer-product.service';
 
 @Component({
   selector: 'app-product',
@@ -10,10 +11,17 @@ import { CalculService } from '../services/calcul.service';
 })
 export class ProductComponent {
 
-  constructor(private ps:ProductService, private cs :CalculService) { }
+  constructor(private ps:ProductService, private cs :CalculService, private consp:ConsumerProductService) { }
   priceMax!:number;
+  listProduct:Product[]=[];
 
-  listProduct=this.ps.listProduct
+  //listProduct=this.ps.listProduct;
+
+  ngOnInit(){
+  this.consp.getProducts().subscribe(
+      (data:Product[])=> this.listProduct=data
+  );
+}
 
   increment(i:number){
     this.listProduct[i].like++
