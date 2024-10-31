@@ -15,6 +15,7 @@ import { ApartmentComponent } from './apartment/apartment.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { HttpClientModule } from '@angular/common/http';
+import { UpdateProductComponent } from './update-product/update-product.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +29,7 @@ import { HttpClientModule } from '@angular/common/http';
     ApartmentComponent,
     ReactiveFormsComponent,
     AddProductComponent,
+    UpdateProductComponent,
   ],
   imports: [
     BrowserModule,

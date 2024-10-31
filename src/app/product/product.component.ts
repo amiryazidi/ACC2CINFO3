@@ -31,4 +31,10 @@ export class ProductComponent {
   }
 
   stock:number= this.cs.stat(this.listProduct,'quantity',0)
+
+  supp(id:number){
+    this.consp.deleteProduct(id).subscribe(
+      ()=> this.ngOnInit()
+    )
+  }
 }
