@@ -23,6 +23,22 @@
       "quantity": 100,
       "like": 0,
       "image": "yazidi"
+    },
+    {
+      "id": 9999,
+      "title": "addjson",
+      "price": 500,
+      "quantity": 555,
+      "like": 0,
+      "image": "tatatat"
+    },
+    {
+      "id": 5,
+      "title": "testadd",
+      "price": 500,
+      "quantity": 550,
+      "like": 0,
+      "image": "ayayya"
     }
   ]
 }

@@ -17,6 +17,8 @@ export class ConsumerProductService {
   getProductById(id:number){
     return this.http.get<Product>('http://localhost:3000/products'+'/'+id)
     }
-    
+    AddProduct(product:Product){
+      return this.http.post('http://localhost:3000/products',product)
+    }
 
 }
